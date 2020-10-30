@@ -29,7 +29,7 @@ export function compareBN(a: BigNumberish, b: BigNumberish): number {
 // Look up an address' App Name using the dapp-contract-list
 export async function addressToAppName(address: string): Promise<string | undefined> {
   try {
-    const { data } = await axios.get(`https://raw.githubusercontent.com/rkalis/revoke.cash/master/dapp-contract-list/${getAddress(address)}.json`)
+    const { data } = await axios.get(`https://raw.githubusercontent.com/akshaynexus/revoke.cash/master/dapp-contract-list/${getAddress(address)}.json`)
     return data.appName
   } catch {
     return undefined
